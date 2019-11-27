@@ -75,7 +75,7 @@ h4 {
     cursor: pointer;
 }
 .boton-amarillo {
-    background-color: #E08709;
+    background-color: rgb(224, 220, 9);
 }
 .boton-verde {
     background-color: #71B100;
@@ -423,4 +423,13 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.mapas {
+    width: 40%;
+    max-width: 50rem; /** = 1200px; **/
+    margin: 0 auto;
+}
+.boton-azul {
+    background-color: rgb(90, 141, 161);
 }

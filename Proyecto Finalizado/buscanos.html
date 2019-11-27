@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AUTOS</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyAIs6FmMkrkFPujW_jGAOrZIKNmiTMzWLw"
+    type="text/javascript"></script>
+  <script type="text/javascript">
+   function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+		  //donde se tienen que cambiar los controles que al usuario le apareceran cuando se visualice;
+        map.addControl(new GMapTypeControl());//muestra mapa, satelite, e hibrido...
+        map.addControl(new GLargeMapControl());//controles de movimiento;
+        map.addControl(new GScaleControl());//añade controles de zoom;
+        map.addControl(new GOverviewMapControl());//añade una pequeña sobrevista;
+        
+        map.setCenter(new GLatLng(19.811739,-90.529736), 5);// donde tengo que cambiar las cordenadas xd; latitud y longitud.
+        //el 5 indica el zoom inicial del mapa
+      
+		map.setMapType(G_HYBRID_TYPE);
+			
+		function addtag(point, address) {
+		var marker = new GMarker(point);
+		GEvent.addListener(marker, "click", function() { marker.openInfoWindowHtml(address); } );
+		return marker;
+		}
+		
+		var point = new GLatLng(19.811739,-90.529736);
+		var address = '<b>ford campeche</b><br/><i>Centro de ford campeche</i><br /><a href="https://goo.gl/maps/s61Yq7nZpv4ZTgSZ7">Web del Centro de ford campeche</a>';
+		var marker = addtag(point, address);
+		
+		map.addOverlay(marker);	
+		  
+      }
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    <div id="map" align="center" style="width: 500px; height: 500px"></div>
+    <hr/>
+    <a>Ejemplo desarrollado para&nbsp;</a><a></a><a>&nbsp;por: beatriz</a>
+    <p><p/>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="img/ford.svg" alt="Logotipo de Bienes Raices">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="Icono Menu">
+                    </a>
+                   
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="buscanos.html">Buscanos</a>
+                </nav>
+            </div>
+        </div> <!-- contenedor -->
+    </header>
+
+    <main class="mapas">
+        <h1 class="fw-300 centrar-texto">BUSCANOS</h1>
+            <img src="img/car.png" alt="Anuncio casa en el lago">
+        
+       <a href="ubicanos1.html" class="boton boton-azul d-block">Ver Ubicación</a>
+       <a href="ubicanos2.html" class="boton boton-azul d-block">Ver Ubicación</a>
+       <a href="ubicanos3.html" class="boton boton-azul d-block">Ver Ubicación</a>
+         </div><!--contenido anuncio-->
+            </div> <!--anuncio-->
+        
+    </main>
+
+   
+</body>
+</html>
